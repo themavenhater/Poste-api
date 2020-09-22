@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workers",
+  "info": {
+    "name": "workers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "function": {
+      "model": "function",
+      "via": "users"
+    },
+    "ref_user": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "device_id": {
+      "type": "string"
+    },
+    "role": {
+      "plugin": "users-permissions",
+      "model": "role"
+    }
+  }
+}

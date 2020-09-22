@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_types",
+  "info": {
+    "name": "serviceType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "services": {
+      "via": "service_type",
+      "collection": "services"
+    }
+  }
+}

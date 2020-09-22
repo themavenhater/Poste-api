@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "functions",
+  "info": {
+    "name": "function"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "users": {
+      "via": "function",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "name": "notes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "formulaire",
+        "omra",
+        "interimNote",
+        "convention",
+        "vacances",
+        "formation",
+        "candidature",
+        "nomination",
+        "serviceNote"
+      ]
+    },
+    "views": {
+      "type": "json"
+    }
+  }
+}
